@@ -41,3 +41,7 @@
   letter-spacing: 0.06rem;
   line-height: 2;
 }
+
+.about-avatar img {
+  border-radius: 10%;
+}
