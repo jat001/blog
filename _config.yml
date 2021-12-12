@@ -4,17 +4,17 @@
 
 # Site
 title: SinoSky
-subtitle: 学习 记录 分享 发现
-description: 学习新知，记录心得，分享成果，发现未知。
+subtitle: '学习 记录 分享 发现'
+description: '学习新知，记录心得，分享成果，发现未知。'
 keywords:
 author: Jat
 language: zh-CN
-timezone: Asia/Shanghai
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://www.sinosky.org
-permalink: :title.html
+permalink: :name.html
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -31,7 +31,7 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :year/:month/:title.md # File name of new posts
+new_post_name: :year/:month/:day-:title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
@@ -129,3 +129,29 @@ sitemap:
     path: sitemap.xml
 baidusitemap:
     path: baidusitemap.xml
+
+restful:
+  # site 可配置为数组选择性生成某些属性
+  # site: ['title', 'subtitle', 'description', 'author', 'since', email', 'favicon', 'avatar']
+  site: true        # hexo.config mix theme.config
+  posts_size: 10    # 文章列表分页，0 表示不分页
+  posts_props:      # 文章列表项的需要生成的属性
+    title: true
+    slug: true
+    date: true
+    updated: true
+    comments: true
+    path: true
+    excerpt: false
+    cover: true      # 封面图，取文章第一张图片
+    content: false
+    keywords: false
+    categories: true
+    tags: true
+  categories: true         # 分类数据
+  use_category_slug: false # Use slug for filename of category data
+  tags: true               # 标签数据
+  use_tag_slug: false      # Use slug for filename of tag data
+  post: true               # 文章数据
+  pages: false             # 额外的 Hexo 页面数据, 如 About
+  galleries: false         # 相册数据

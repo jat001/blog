@@ -1,9 +1,12 @@
 User-agent: *
 
-Disallow: /vendors/
 Disallow: /css/
 Disallow: /js/
 Disallow: /lib/
+Disallow: /api/
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /*.json$
 
 Allow: /
 
