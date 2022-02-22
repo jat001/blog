@@ -1,6 +1,6 @@
 {
   "name": "hexo-sinosky",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "build": "hexo generate",
@@ -9,10 +9,10 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "5.4.0"
+    "version": "6.0.0"
   },
   "dependencies": {
-    "hexo": "^5.4.0",
+    "hexo": "^6.0.0",
     "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-baidu-sitemap": "^0.1.9",
@@ -22,9 +22,9 @@
     "hexo-generator-sitemap": "^2.2.0",
     "hexo-generator-tag": "^1.0.0",
     "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-marked": "^4.1.0",
+    "hexo-renderer-marked": "^5.0.0",
     "hexo-renderer-stylus": "^2.0.1",
-    "hexo-server": "^2.0.0",
-    "hexo-theme-fluid": "^1.8.12"
+    "hexo-server": "^3.0.0",
+    "hexo-theme-fluid": "^1.8.14"
   }
 }
