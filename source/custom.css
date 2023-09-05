@@ -1,25 +1,22 @@
-@media (min-width: 575px) {
-  .flex-center {
-    background-image: url("/images/logo_full.svg");
-    background-position: 50% 25%;
-    background-repeat: no-repeat;
-    background-size: auto 200px;
-  }
+.header-inner[style="height: 100vh;"] .flex-center {
+  background-image: url("/images/logo_full.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: auto 200px;
+}
 
-  .page-header {
-    margin-top: 150px;
+@media (max-width: 767px) {
+  .header-inner[style="height: 100vh;"] .flex-center {
+    background-size: auto 150px;
   }
 }
 
-@media (min-width: 575px) and (max-width: 767px) {
-  .flex-center {
-    background-position: 50% 30%;
-    background-size: auto 150px;
-  }
+.navbar-dark {
+  background-color: var(--navbar-bg-color);
+}
 
-  .page-header {
-    margin-top: 180px;
-  }
+.scroll-down-bar i.iconfont {
+  color: var(--text-color);
 }
 
 .index-excerpt {

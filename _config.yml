@@ -4,12 +4,12 @@
 
 # Site
 title: SinoSky
-subtitle: '学习 记录 分享 发现'
-description: '学习新知，记录心得，分享成果，发现未知。'
-keywords:
+subtitle: ''
+description: Jat's personal blog.
+keywords: ''
 author: Jat
 language: zh-CN
-timezone: 'Asia/Shanghai'
+timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
