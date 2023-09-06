@@ -20,7 +20,9 @@ jobs:
 
       - name: Install and setup ossutil
         run: |
-          url="$(curl -fsS https://api.github.com/repos/aliyun/ossutil/releases/latest | jq '.assets[] | select(.name | contains("linux-amd64")) .browser_download_url')"
+          apt-get update
+          apt-get install libarchive-tools
+          url="$(curl -fsS https://api.github.com/repos/aliyun/ossutil/releases/latest | jq -r '.assets[] | select(.name | contains("linux-amd64")) .browser_download_url')"
           curl -fsSL "$url" | bsdtar -xf - --strip-components=1
           chmod a+x ossutil64
           ./ossutil64 config -e 'https://oss-${{ secrets.OSS_REGION }}.aliyuncs.com' -i '${{ secrets.OSS_ACCESSID }}' -k '${{ secrets.OSS_ACCESSKEY }}'
