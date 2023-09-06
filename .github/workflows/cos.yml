@@ -7,26 +7,30 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: "cos"
+  group: cos
   cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Download and setup coscli
         run: |
           wget -nv -O coscli https://github.com/tencentyun/coscli/releases/latest/download/coscli-linux
           chmod a+x coscli
           touch ~/.cos.yaml
-          ./coscli config set --secret-id ${{ secrets.COS_SECRETID }} --secret-key ${{ secrets.COS_SECRETKEY }}
-          ./coscli config add --alias sinosky --bucket ${{ secrets.COS_BUCKET }} --region ${{ secrets.COS_REGION }}
+          ./coscli config set --secret-id '${{ secrets.COS_SECRETID }}' --secret-key '${{ secrets.COS_SECRETKEY }}'
+          ./coscli config add --alias sinosky --bucket '${{ secrets.COS_BUCKET }}' --region '${{ secrets.COS_REGION }}'
+
       - name: Generate static content
         run: |
           npm install
           npm run build
+
       - name: Deploy to COS
         run: |
           ./coscli rm cos://sinosky/ --recursive --force
