@@ -2,8 +2,8 @@ name: Deploy static content to Tencent COS
 
 on:
   push:
-    branches: ["master"]
-
+    branches:
+      - master
   workflow_dispatch:
 
 concurrency:
@@ -23,7 +23,7 @@ jobs:
           wget -nv -O coscli https://github.com/tencentyun/coscli/releases/latest/download/coscli-linux
           chmod a+x coscli
           touch ~/.cos.yaml
-          ./coscli config set --secret-id '${{ secrets.COS_SECRETID }}' --secret-key '${{ secrets.COS_SECRETKEY }}'
+          ./coscli config set --secret_id '${{ secrets.COS_SECRETID }}' --secret_key '${{ secrets.COS_SECRETKEY }}'
           ./coscli config add --alias sinosky --bucket '${{ secrets.COS_BUCKET }}' --region '${{ secrets.COS_REGION }}'
 
       - name: Generate static content
