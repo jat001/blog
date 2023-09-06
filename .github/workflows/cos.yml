@@ -18,13 +18,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Download and setup coscli
+      - name: Install and setup coscmd
         run: |
-          wget -nv -O coscli https://github.com/tencentyun/coscli/releases/latest/download/coscli-linux
-          chmod a+x coscli
-          touch ~/.cos.yaml
-          ./coscli config set --secret_id '${{ secrets.COS_SECRETID }}' --secret_key '${{ secrets.COS_SECRETKEY }}'
-          ./coscli config add --alias sinosky --bucket '${{ secrets.COS_BUCKET }}' --region '${{ secrets.COS_REGION }}'
+          pip install -U coscmd
+          coscmd config -a '${{ secrets.COS_SECRETID }}' -s '${{ secrets.COS_SECRETKEY }}' -b '${{ secrets.COS_BUCKET }}' -r '${{ secrets.COS_REGION }}'
 
       - name: Generate static content
         run: |
@@ -33,4 +30,4 @@ jobs:
 
       - name: Deploy to COS
         run: |
-          ./coscli sync public/ cos://sinosky/ --recursive
+          coscmd upload -rs --delete public/ /
