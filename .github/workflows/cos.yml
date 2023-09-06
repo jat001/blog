@@ -33,5 +33,4 @@ jobs:
 
       - name: Deploy to COS
         run: |
-          ./coscli rm cos://sinosky/ --recursive --force
-          ./coscli cp public/ cos://sinosky/ --recursive
+          ./coscli sync public/ cos://sinosky/ --recursive
