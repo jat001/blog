@@ -1,4 +1,4 @@
-name: Deploy static content to Tencent COS
+name: Deploy static content to Tencent Cloud COS
 
 on:
   push:
