@@ -30,4 +30,4 @@ jobs:
 
       - name: Deploy to COS
         run: |
-          coscmd upload -rs --delete public/ /
+          coscmd upload -rsy --delete public/ /
