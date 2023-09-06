@@ -18,9 +18,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Download and setup coscli
         run: |
-          wget -O coscli https://github.com/tencentyun/coscli/releases/latest/download/coscli-linux
+          wget -nv -O coscli https://github.com/tencentyun/coscli/releases/latest/download/coscli-linux
           chmod a+x coscli
-          ./coscli config set --secret_id ${{ secrets.COS_SECRETID }} --secret_key ${{ secrets.COS_SECRETKEY }}
+          touch ~/.cos.yaml
+          ./coscli config set --secret-id ${{ secrets.COS_SECRETID }} --secret-key ${{ secrets.COS_SECRETKEY }}
           ./coscli config add --alias sinosky --bucket ${{ secrets.COS_BUCKET }} --region ${{ secrets.COS_REGION }}
       - name: Generate static content
         run: |
