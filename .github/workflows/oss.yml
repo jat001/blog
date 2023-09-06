@@ -20,8 +20,8 @@ jobs:
 
       - name: Install and setup ossutil
         run: |
-          apt-get update
-          apt-get install libarchive-tools
+          sudo apt-get update
+          sudo apt-get install libarchive-tools
           url="$(curl -fsS https://api.github.com/repos/aliyun/ossutil/releases/latest | jq -r '.assets[] | select(.name | contains("linux-amd64")) .browser_download_url')"
           curl -fsSL "$url" | bsdtar -xf - --strip-components=1
           chmod a+x ossutil64
