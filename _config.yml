@@ -84,6 +84,8 @@ category_map:
   码农与 IT: programmer-and-it
   哲学: philosophy
 tag_map:
+  面试: interview
+  马克思主义: marxism
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
