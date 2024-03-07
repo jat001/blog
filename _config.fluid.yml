@@ -953,26 +953,22 @@ about:
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
   icons:
-    - {
-        class: "iconfont icon-github-fill",
-        link: "https://github.com/jat001",
-        tip: "GitHub",
-      }
-    - {
-        class: "iconfont icon-stack-overflow-fill",
-        link: "https://stackoverflow.com/users/4446507/jat",
-        tip: "Stack Overflow",
-      }
-    - {
-        class: "iconfont icon-steam",
-        link: "https://steamcommunity.com/id/jat001",
-        tip: "Steam",
-      }
-    - {
-        class: "iconfont icon-douban-fill",
-        link: "https://www.douban.com/people/jat001",
-        tip: "豆瓣",
-      }
+    - class: "iconfont icon-github-fill"
+      link: "https://github.com/jat001"
+      tip: "GitHub"
+
+    - class: "iconfont icon-stack-overflow-fill"
+      link: "https://stackoverflow.com/users/4446507/jat"
+      # https://github.com/fluid-dev/hexo-theme-fluid/pull/1073
+      tip: "StackOverflow"
+
+    - class: "iconfont icon-steam"
+      link: "https://steamcommunity.com/id/jat001"
+      tip: "Steam"
+
+    - class: "iconfont icon-douban-fill"
+      link: "https://www.douban.com/people/jat001"
+      tip: "豆瓣"
 
 #---------------------------
 # 自定义页
