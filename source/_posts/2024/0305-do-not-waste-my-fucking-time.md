@@ -24,10 +24,6 @@ Please don't tell me which framework I should learn. If you want to hire me, I w
 
 Please don't give me any tests that take more than an hour to complete. Hard to find a good job doesn't mean I will work for free.
 
-Do not question my professional abilities. Anybody who has worked with me would agree on this.
+Do not question my professional abilities. Anybody who has worked with me would agree on this. Believe it or not, I only received the nine-year compulsory education. I began learning programming at a young age because I was interested in computers.
 
-If you don't like my style. That's OK. Feel free to throw my resume in the trash. I seriously don't care. And please do not give me any advice. No one likes taking advice from strangers.
-
-Believe it or not, I only received the nine-year compulsory education. Programming is self-taught.
-
-Remember, talk is cheap, show the code.
+If you don't like my style. That's OK. Feel free to throw my resume in the trash. I seriously don't care. And please do not give me any advice. No one likes taking advice from strangers. Remember, talk is cheap, show the code.
