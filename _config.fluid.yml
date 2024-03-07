@@ -959,6 +959,11 @@ about:
         tip: "GitHub",
       }
     - {
+        class: "iconfont icon-stack-overflow-fill",
+        link: "https://stackoverflow.com/users/4446507/jat",
+        tip: "Stack Overflow",
+      }
+    - {
         class: "iconfont icon-steam",
         link: "https://steamcommunity.com/id/jat001",
         tip: "Steam",
